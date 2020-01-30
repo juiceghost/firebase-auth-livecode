@@ -1,8 +1,6 @@
-import React from 'react';
+import FirebaseContext, { withFirebase } from './context';
+import Firebase from './firebase';
 
-const Admin = () => (<div>
-    <h1>App</h1>
-</div>
-);
+export default Firebase;
 
-export default Admin;
+export { FirebaseContext, withFirebase };
