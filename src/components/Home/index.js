@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Admin = () => (<div>
-    <h1>App</h1>
-</div>
-);
+import { withAuthorization } from '../Session';
 
-export default Admin;
+const HomePage = () => (
+    <div>
+        <h1>Home Page</h1>
+        <p>The Home Page is accessible by every signed in user.</p>
+    </div>);
+
+const condition = authUser => !!authUser;
+export default withAuthorization(condition)(HomePage);
